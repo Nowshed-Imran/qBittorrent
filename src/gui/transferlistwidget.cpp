@@ -1015,7 +1015,7 @@ void TransferListWidget::displayListMenu(const QPoint &)
     for (const QString &category : asConst(categories))
     {
         const QString escapedCategory = QString(category).replace('&', "&&");  // avoid '&' becomes accelerator key
-        QAction *cat = categoryMenu->addAction(UIThemeManager::instance()->getIcon("inode-directory"), escapedCategory
+        QAction *cat = categoryMenu->addAction(UIThemeManager::instance()->getIcon("view-categories"), escapedCategory
             , this, [this, category]() { setSelectionCategory(category); });
 
         if (allSameCategory && (category == firstCategory))
